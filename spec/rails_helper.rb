@@ -6,6 +6,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'rspec/rails'
 require 'factory_girl_rails'
+require 'capybara/rspec'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -54,4 +55,9 @@ RSpec.configure do |config|
 
   # Add FactoryGirl
   config.include FactoryGirl::Syntax::Methods
+
+  config.include Capybara::DSL
+
+  # Now we can use route url helpers
+  config.include Rails.application.routes.url_helpers
 end

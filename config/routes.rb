@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "attractions#index"
 
+  devise_for :users
+
   resources :attractions
 
   # The priority is based upon order of creation: first created -> highest priority.

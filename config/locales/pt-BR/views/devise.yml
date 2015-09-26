@@ -1,0 +1,10 @@
+pt-BR:
+  devise:
+    registrations:
+      new:
+        title: Crie sua conta
+        sign_up: Criar conta
+    sessions:
+      new:
+        title: Entrar
+        sign_in: Entrar

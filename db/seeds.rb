@@ -7,6 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
+def create_users
+  User.create!(username: "karydja", email: "karydjasouza@outlook.com", password: "password",
+               password_confirmation: "password")
+end
+
 def create_attractions
   Attraction.create!(name: "How I met your mother",
                      description: "A cômica busca de Ted Mosby por sua alma gêmera só para quando"\
@@ -23,4 +28,5 @@ def create_attractions
                      "banda Queen.")
 end
 
+create_users
 create_attractions
