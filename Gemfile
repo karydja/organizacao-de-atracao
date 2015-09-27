@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 
+gem 'draper'
+
 group :development, :test do
   gem 'pry-rails'
   gem "better_errors"
