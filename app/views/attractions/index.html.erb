@@ -1,9 +1,10 @@
 <div class="uk-grid uk-panel uk-panel-box">
   <div class="uk-width-medium-1-2">
-    <h3><%= t('attractions.index.coming_attractions') %></h3>
+    <h2><%= t('attractions.index.coming_attractions') %></h2>
+    <%= render @attraction.user_attractions %>
   </div>
   <div class="uk-width-medium-1-2">
-    <h3><%= t('attractions.index.new_attraction') %></h3>
+    <h2><%= t('attractions.index.new_attraction') %></h2>
     <%= render 'form' %>
   </div>
 </div>

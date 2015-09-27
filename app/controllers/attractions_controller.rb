@@ -2,7 +2,7 @@ class AttractionsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @attraction = Attraction.new
+    @attraction = Facade::AttractionFacade.new(current_user)
   end
 
   def create
@@ -19,6 +19,6 @@ class AttractionsController < ApplicationController
   private
 
   def attraction_params
-    params.require(:attraction).permit(:name, :description, :media, :date, :time)
+    params.require(:attraction).permit(:name, :description, :media, :date)
   end
 end

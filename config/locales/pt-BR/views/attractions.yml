@@ -4,3 +4,7 @@ pt-BR:
       coming_attractions: Essa é a sua programação atual
       new_attraction: Quer tal adicionar mais uma atração à lista?
       pick_schedule: Escolha um horário para essa atração, caso queira
+    form:
+      name: Nome da atração
+      description: Informe uma descrição para a atração
+

@@ -9,7 +9,7 @@ RSpec.describe AttractionsController, type: :controller do
 
       it "assigns @attraction" do
         get :index
-        expect(assigns(:attraction)).to be_a_new(Attraction)
+        expect(assigns(:attraction).class).to be(Facade::AttractionFacade)
       end
     end
 

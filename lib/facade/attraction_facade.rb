@@ -10,6 +10,6 @@ class Facade::AttractionFacade
   end
 
   def user_attractions
-    @user_attraction = @user.attractions.decorate
+    @user_attraction = @user.attractions.date_asc.decorate
   end
 end

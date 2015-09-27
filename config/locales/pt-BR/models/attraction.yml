@@ -1,9 +1,10 @@
 pt-BR:
   attraction:
     attributes:
-      name: Nome da atração
-      description: Insira uma descrição para a atração
-      media: Em que mídia você vai assistir?
+      name: Nome
+      description: Descrição
+      media: Mídia
+      date: Data
     media:
       television: Televisão
       movie_theater: Cinema
