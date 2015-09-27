@@ -8,16 +8,20 @@
   </head>
   <body>
 
-  <%= yield %>
+  <%= render 'layouts/header' %>
 
   <% flash.each do |name, msg| %>
     <% if msg.is_a?(String) %>
-      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-        <a class="close" data-dismiss="alert">&#215;</a>
+      <div data-uk-alert class="uk-alert uk-alert-<%= name == "notice" ? "success" : "danger" %>">
+        <a class="uk-close uk-alert-close"></a>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       </div>
     <% end %>
   <% end %>
+
+  <%= yield %>
+
+  <%= render 'layouts/footer' %>
 
   </body>
 </html>

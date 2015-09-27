@@ -3,7 +3,7 @@ pt-BR:
     attributes:
       login: Username ou email
       username: Username
-      email: email
-      password: senha
-      password_confirmation: confirme sua senha
+      email: Email
+      password: Senha
+      password_confirmation: Confirme sua senha
       remember_me: Lembrar minha senha

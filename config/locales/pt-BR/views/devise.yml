@@ -1,10 +1,14 @@
 pt-BR:
   devise:
+    links:
+      sign_up: Criar conta
+      sign_in: Entrar
+      sign_out: Sair
+      edit: Editar conta
+      forgot_password: Esqueceu sua senha?
     registrations:
       new:
         title: Crie sua conta
-        sign_up: Criar conta
     sessions:
       new:
         title: Entrar
-        sign_in: Entrar

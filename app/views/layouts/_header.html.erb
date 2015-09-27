@@ -1,0 +1,27 @@
+<nav class="uk-navbar">
+    <%= link_to "Attraction Manager", root_path, class: "uk-navbar-brand" %>
+    <% if user_signed_in? %>
+      <div class="uk-navbar-flip">
+        <ul class="uk-navbar-nav">
+          <li>
+            <div class="uk-button-dropdown" data-uk-dropdown="{mode:'click'}">
+              <button class="uk-button-large uk-button adjust-height"><%= current_user.username %>
+                <i class="uk-icon-caret-down"></i>
+              </button>
+
+              <div class="uk-dropdown">
+                <ul class="uk-nav uk-nav-dropdown">
+                  <li><%= link_to t('devise.links.sign_up'), edit_user_registration_path %></li>
+                  <li><%= link_to t('devise.links.sign_out'), destroy_user_session_path, method: :delete %></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    <% else %>
+      <ul class="uk-navbar-nav">
+        <li><%= link_to t('devise.links.sign_up'), new_user_registration_path %></li>
+      </ul>
+    <% end %>
+  </nav>
