@@ -1,0 +1,6 @@
+pt-BR:
+  attractions:
+    index:
+      coming_attractions: Essa é a sua programação atual
+      new_attraction: Quer tal adicionar mais uma atração à lista?
+      pick_schedule: Escolha um horário para essa atração, caso queira

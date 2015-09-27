@@ -2406,7 +2406,7 @@ select.uk-form-width-mini {
   border: 0;
   padding: 0;
 }
-.uk-button {
+.uk-button, .uk-date-select > select {
   -webkit-appearance: none;
   margin: 0;
   border: none;

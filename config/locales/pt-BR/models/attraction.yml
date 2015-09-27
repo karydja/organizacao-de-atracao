@@ -1,0 +1,15 @@
+pt-BR:
+  attraction:
+    attributes:
+      name: Nome da atração
+      description: Insira uma descrição para a atração
+      media: Em que mídia você vai assistir?
+    media:
+      television: Televisão
+      movie_theater: Cinema
+      neftlix: Netflix
+      dvd: DVD
+      other: Outro
+    alerts:
+      created: "Atração cadastrada com sucesso"
+      not_created: "Não foi possível cadastrar a atração"

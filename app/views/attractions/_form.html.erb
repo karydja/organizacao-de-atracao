@@ -1,0 +1,45 @@
+<%= form_for(@attraction) do |f| %>
+  <% if @attraction.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @attraction.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="uk-form-row">
+    <%= f.text_field :name, class: "uk-width-small-1-1 uk-width-large-4-5 uk-form-large",
+      placeholder: t('attraction.attributes.name') %>
+  </div>
+
+  <div class="uk-form-row">
+    <%= f.text_area :description, rows: 10, class: "uk-width-small-1-1 uk-width-large-4-5",
+      placeholder: t('attraction.attributes.description') %>
+  </div>
+
+  <h5><strong><%= t('attractions.index.pick_schedule') %></strong></h5>
+
+  <div class="uk-form-row uk-width-small-1-1 uk-width-large-4-5">
+    <span class="uk-date-select uk-float-left">
+      <%= f.date_select :date, start_year: Date.today.year,
+        end_year: Date.today.year - 100, autofocus: true, class: "uk-float-left" %>
+    </span>
+
+    <span class="uk-date-select uk-float-right">
+      <%= f.time_select :time, autofocus: true, class: "uk-float-right" %>
+    </span>
+  </div>
+
+  <div class="uk-form-row uk-date-select">
+    <%= f.select :media, Attraction.i18n_media, prompt: t('attraction.attributes.media') %>
+  </div>
+
+  <div class="uk-form-row">
+    <%= f.submit t('actions.save'),
+      class: "uk-width-small-1-1 uk-width-large-4-5 uk-button uk-button-success uk-button-large" %>
+  </div>
+
+
+<% end %>
