@@ -1,4 +1,9 @@
 <div class="uk-grid uk-panel uk-panel-box">
-  <h2><%= t('users.index.all') %></h2>
-  <%= render @users %>
+  <div class="uk-width-medium-1-2">
+    <h2><%= t('users.index.all') %></h2>
+    <div class="uk-accordion" data-uk-accordion="">
+      <%= render @users %>
+    </div>
+  </div>
 </div>
+

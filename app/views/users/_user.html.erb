@@ -1,0 +1,12 @@
+<div class="uk-accordion container">
+  <div class="uk-accordion-title header">
+    <span><%= user.username %></span>
+  </div>
+  <div class="content">
+    <% if user.attractions.empty? %>
+      <%= t('users.user.no_attractions') %>
+    <% else %>
+      <%= render user.attractions.date_asc.decorate %>
+    <% end %>
+  </div>
+</div>

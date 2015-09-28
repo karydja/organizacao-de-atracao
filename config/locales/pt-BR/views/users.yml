@@ -3,4 +3,7 @@ pt-BR:
     index:
       title: Todos os usuários
       all: Esses são os usuários cadastrados
+    user:
+      my_attractions: Veja as minhas atrações
+      no_attractions: Não há atrações cadastradas para esse usuário
 

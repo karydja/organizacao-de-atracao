@@ -8,7 +8,16 @@
 
 
 def create_users
-  User.create!(username: "example", email: "example@example.com", password: "password",
+  User.create!(username: "jessica", email: "jessica@example.com", password: "password",
+               password_confirmation: "password")
+
+  User.create!(username: "mike", email: "mike@example.com", password: "password",
+               password_confirmation: "password")
+
+  User.create!(username: "anna", email: "anna@example.com", password: "password",
+               password_confirmation: "password")
+
+  User.create!(username: "rose", email: "rose@example.com", password: "password",
                password_confirmation: "password")
 end
 
