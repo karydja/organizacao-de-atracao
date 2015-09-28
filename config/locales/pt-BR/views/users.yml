@@ -1,0 +1,6 @@
+pt-BR:
+  users:
+    index:
+      title: Todos os usuários
+      all: Esses são os usuários cadastrados
+
