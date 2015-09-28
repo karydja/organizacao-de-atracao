@@ -1,34 +1,35 @@
-<h2><%= t('devise.registrations.new.title') %></h2>
+<div class="uk-grid uk-panel uk-panel-box">
+  <div class="uk-width-medium-1-2">
+    <h2><%= t('devise.registrations.new.title') %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label t('user.attributes.username') %><br />
-    <%= f.text_field :username, autofocus: true %>
+      <div class="uk-form-row">
+        <%= f.text_field :username, class: "uk-width-3-4 uk-form-large",
+          placeholder: t('user.attributes.username') %>
+      </div>
+
+      <div class="uk-form-row">
+        <%= f.email_field :email, class: "uk-width-3-4 uk-form-large",
+          placeholder: t('user.attributes.email') %>
+      </div>
+
+      <div class="uk-form-row">
+        <%= f.password_field :password, class: "uk-width-3-4 uk-form-large",
+          placeholder: t('user.attributes.minimum_password',
+            minimum: @minimum_password_length) %>
+      </div>
+
+      <div class="uk-form-row">
+        <%= f.password_field :password_confirmation, class: "uk-width-3-4 uk-form-large",
+          placeholder: t('user.attributes.password_confirmation') %>
+      </div>
+
+      <div class="uk-form-row">
+        <%= f.submit t('devise.links.sign_up'),
+          class: "uk-width-small-1-1 uk-width-large-3-4 uk-button uk-button-success uk-button-large" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label t('user.attributes.email') %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label t('user.attributes.password') %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label t('user.attributes.password_confirmation') %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit t('devise.links.sign_up') %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

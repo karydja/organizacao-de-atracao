@@ -7,3 +7,4 @@ pt-BR:
       password: Senha
       password_confirmation: Confirme sua senha
       remember_me: Lembrar minha senha
+      minimum_password: "Senha (mínimo de %{minimum} caracteres)"
